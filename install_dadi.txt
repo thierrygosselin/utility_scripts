@@ -1,0 +1,66 @@
+1. Install Cython
+cd Downloads
+wget http://cython.org/release/Cython-0.23.3.zip
+unzip Cython-0.23.3.zip
+cd Cython-0.23.3
+sudo python setup.py install
+cd ..
+sudo rm -R Cython-0.23.3.zip Cython-0.23.3
+
+2. Install Numpy
+cd Downloads
+git clone http://github.com/numpy/numpy.git numpy
+cd numpy
+sudo python setup.py install
+cd ..
+sudo rm -R numpy
+
+3. Install Scipy
+cd Downloads
+git clone http://github.com/scipy/scipy.git scipy
+cd scipy
+sudo python setup.py install
+cd ..
+sudo rm -R scipy
+
+4. Install freetype
+cd Downloads
+wget http://download.savannah.gnu.org/releases/freetype/freetype-2.4.0.tar.gz
+tar -xvf freetype-2.4.0.tar.gz
+cd freetype-2.4.0
+./configure
+make
+sudo make install
+cd ..
+sudo rm -R freetype-2.4.0 freetype-2.4.0.tar.gz
+
+5. Install setuptools
+cd Downloads
+wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
+sudo rm -R setuptools-18.3.2.zip
+
+6. Install six
+cd Downloads
+wget https://pypi.python.org/packages/source/s/six/six-1.10.0.tar.gz#md5=34eed507548117b2ab523ab14b2f8b55
+tar -xvf six-1.10.0.tar.gz
+cd six-1.10.0
+cd ..
+sudo rm -R six-1.10.0 six-1.10.0.tar.gz
+
+7. matplotlib
+cd Downloads
+wget https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.3/matplotlib-1.4.3.tar.gz
+tar -xvf matplotlib-1.4.3.tar.gz
+cd matplotlib-1.4.3
+sudo python setup.py build
+sudo python setup.py install
+cd ..
+sudo rm -R matplotlib-1.4.3.tar.gz matplotlib-1.4.3
+
+8. dadi 1.7.0
+cd Downloads
+git clone https://bitbucket.org/RyanGutenkunst/dadi.git
+cd dadi
+sudo python setup.py install
+cd tests
+python run_tests.py
